@@ -34,16 +34,14 @@ const convertTime = function(timestamp) {
   const date = moment(timestamp, dateFormats, true)
   const datetime = moment(timestamp, datetimeFormats, true)
   const converted = {
-    human: "null",
+    natural: "null",
     unix: "null"
   }
-  // console.log('DATETIME VALID? '+datetime.isValid());
-  // console.log('DATE VALID? '+date.isValid());
   if (datetime.isValid()) {
-    converted.human = datetime.format('MMM D, YYYY HH:mm:ss')
+    converted.natural = datetime.format('MMM D, YYYY HH:mm:ss')
     converted.unix = datetime.format('X')*1
   } else if (date.isValid()) {
-    converted.human = date.format('MMM D, YYYY')
+    converted.natural = date.format('MMM D, YYYY')
     converted.unix = date.format('X')*1
   }
   return converted

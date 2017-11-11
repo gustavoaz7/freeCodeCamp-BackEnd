@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  res.render('timestamp', {convertedTime: convertTime(req.body.timestamp)})
+  res.render('timestamp', {convertedTime: convertTime(req.body.date)})
 })
 
 app.listen(3333, function() {
