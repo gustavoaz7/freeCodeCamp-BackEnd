@@ -1,0 +1,23 @@
+{
+  "name": "request-header-microservice",
+  "version": "1.0.0",
+  "description": "Request Header Microservice project for freeCodeCamp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavoaz7/freeCodeCamp-BackEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavoaz7/freeCodeCamp-BackEnd/issues"
+  },
+  "homepage": "https://github.com/gustavoaz7/freeCodeCamp-BackEnd#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}

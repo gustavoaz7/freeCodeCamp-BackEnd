@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Request Header Microservice</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
+</head>
+<body>
+    <div class="ui fixed inverted menu">
+      <div class="ui container">
+        <div class="header item">Request Header Microservice</div>
+      </div>
+    </div>
+
+    <div class="ui container segment" style="margin-top: 5em; width: 35%;">
+      <table class="ui celled table">
+        <tbody>
+          <tr>
+            <td><strong>IP</strong></td>
+            <td><%= data.ip %></td>
+          </tr>
+          <tr>
+            <td><strong>Language</strong></td>
+            <td><%= data.language %></td>
+          </tr>
+          <tr>
+            <td><strong>Software</strong></td>
+            <td><%= data.software %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+</body>
+</html>
