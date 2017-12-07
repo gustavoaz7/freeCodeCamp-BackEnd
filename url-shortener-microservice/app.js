@@ -25,21 +25,24 @@ app.post('/', (req, res) => {
     // URL already registered in our database
   urls.findOne({originalUrl: req.body.URL}, (err, data) => {
     if (err) throw err;
-    if (data) return res.render('shortened', {
-      originalUrl: data.originalUrl, 
-      shortUrl: `localhost:3333/${data.counter}`, 
-      error: null
-    })
-  })
-    // URL not registered in out database
-  counter++;
-  urls.insertOne({originalUrl: req.body.URL, counter: counter}, (err, data) => {
-    if (err) throw err;
-    return res.render('shortened', {
-      originalUrl: req.body.URL, 
-      shortUrl: `localhost:3333/${counter}`, 
-      error: null
-    })
+    if (data) {
+      return res.render('shortened', {
+        originalUrl: data.originalUrl, 
+        shortUrl: `localhost:3333/${data.counter}`, 
+        error: null
+      })
+    } else {
+      // URL not registered in out database
+      counter++;
+      urls.insertOne({originalUrl: req.body.URL, counter: counter}, (err, data) => {
+        if (err) throw err;
+        return res.render('shortened', {
+          originalUrl: req.body.URL, 
+          shortUrl: `localhost:3333/${counter}`, 
+          error: null
+        })
+      })
+    }
   })
 })
 
