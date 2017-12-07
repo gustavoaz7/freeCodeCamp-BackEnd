@@ -1,0 +1,26 @@
+{
+  "name": "url-shortener-microservice",
+  "version": "1.0.0",
+  "description": "freeCodeCamp URL shortener project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavoaz7/freeCodeCamp-BackEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavoaz7/freeCodeCamp-BackEnd/issues"
+  },
+  "homepage": "https://github.com/gustavoaz7/freeCodeCamp-BackEnd#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.6",
+    "valid-url": "^1.0.9"
+  }
+}

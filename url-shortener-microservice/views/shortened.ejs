@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>URL Shortener Microservice</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
+</head>
+<body>
+    <div class="ui fixed inverted menu">
+      <div class="ui container">
+        <div class="header item">URL Shortener Microservice</div>
+      </div>
+    </div>
+
+    <div class="ui container segment" style="margin-top: 5em; width: 35%">
+      <table class="ui celled table">
+        <% if(error) { %>
+          <tbody>
+            <tr>
+              <td><strong>Error</strong></td>
+              <td><%= error %></td>
+            </tr>
+          </tbody>
+        <% } else { %>
+          <tbody>
+            <tr>
+              <td><strong>Original URL</strong></td>
+              <td><%= originalUrl %></td>
+            </tr>
+            <tr>
+              <td><strong>Short URL</strong></td>
+              <td><a href="<%= shortUrl %>"><%= shortUrl %></a></td>
+            </tr>
+          </tbody>
+        <% } %>
+      </table>
+      <a href="/" class="ui button">New URL</a>
+    </div>
+    
+</body>
+</html>
